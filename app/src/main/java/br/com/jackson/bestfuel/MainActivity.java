@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -101,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Toast.makeText(this, "Versão final", Toast.LENGTH_SHORT).show();
+
     }
 
     private void atualizarGUI(double t){
@@ -114,10 +117,6 @@ public class MainActivity extends AppCompatActivity {
             bestOptionImageView.setImageDrawable(getResources().getDrawable(R.drawable.etanol, null));
             bestOptionInputEditText.setText(getResources().getString(R.string.best_option_ethanol));
         }
-
-
-
-
 
     }
 
