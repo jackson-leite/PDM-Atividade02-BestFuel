@@ -80,7 +80,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_columnSpan="2"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:elevation="@dimen/elevation"
         android:hint="@string/hint_best_option"
         android:textColorHint="@color/colorAccent"
@@ -94,10 +94,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_columnSpan="2"
-            android:backgroundTint="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimaryDark"
             android:elevation="@dimen/elevation"
+            android:enabled="false"
             android:inputType="none"
-            android:text="@string/definite_best_option" />
+            android:text="@string/definite_best_option"
+            android:textColor="@color/colorAccent" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
