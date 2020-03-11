@@ -53,16 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     etValue = (float) progress/100;
                     etanolPriceTextView.setText(currencyFormat.format(etValue));
-
-
-                try{
-                    total = etValue / gasValue;
-                    atualizarGUI(total);
-
-                }catch (ArithmeticException e){
-                    bestOptionInputEditText.setText(getResources().getString(R.string.warning_best_option));
-                }
-
+                    calcularValores(etValue, gasValue);
 
             }
 
@@ -85,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
 
                 gasValue = (float) progress/100;
                 gasPriceTextView.setText(currencyFormat.format(gasValue));
-
-
+                calcularValores(etValue, gasValue);
 
 
             }
@@ -121,5 +111,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    private void calcularValores(double E, double G){
+        try{
+            total = E / G;
+            atualizarGUI(total);
+
+        }catch (ArithmeticException e){
+
+            bestOptionInputEditText.setText(getResources().getString(R.string.warning_best_option));
+        }
+    }
 
 }
